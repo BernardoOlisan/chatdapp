@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "concurrently \"next start\" \"node gun-app.js\"",
+    "start": "concurrently \"next start -p $PORT\" \"node gun-app.js\"",
     "lint": "next lint"
   },
   "dependencies": {
