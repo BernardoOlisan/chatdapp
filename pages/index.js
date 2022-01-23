@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import { useEffect, useState, useReducer } from 'react'
+import { useEffect, useState, useReducer, useRef } from 'react'
 import Gun from 'gun'
 
 
@@ -20,6 +20,7 @@ function reducer(state, message) {
     messages: [message, ...state.messages]
   }
 };
+
 
 export default function Home() {
 
@@ -44,10 +45,11 @@ export default function Home() {
     setForm({ ...formState, [e.target.name]: e.target.value })
   }
 
+
   function saveMessage() {
     const messages = gun.get('messages')
     messages.set({
-      name: formState.name,
+      name: prompt("Pon tu Nombre", "Anónimo"),
       message: formState.message,
       createdAt: Date.now()
     })
@@ -55,6 +57,8 @@ export default function Home() {
       name: '', message: ''
     })
   }
+
+  const dummy = useRef()
 
   return (
     <div>
@@ -64,19 +68,25 @@ export default function Home() {
         <link rel="icon" href="https://i.ibb.co/qBVhRpm/me.png" />
       </Head>
 
-      <input onChange={onChange} placeholder='Name' name='name' value={formState.name} />
-      <input onChange={onChange} placeholder='Message' name='message' value={formState.message} />
-      <button onClick={saveMessage}>Send Message</button>
+      <div className={styles.title}>
+        <a href='https://github.com/BernardoOlisan/DApp-Chat'><h1>DAPP by BernardoOlisan</h1></a>
+      </div>
 
-      {
-        state.messages.map(message => (
-          <div key={message.createdAt}>
-            <h2>{message.message}</h2>
-            <h3>From: {message.name}</h3>
-            <p>Date: {message.createdAt}</p>
-          </div>
-        ))
-      }
+      <input className={styles.inputmsg} onChange={onChange} placeholder='Message' name='message' value={formState.message} />
+      <button className={styles.send} onClick={saveMessage}>Send</button>
+
+      <div className={styles.msgcontainer}>
+        {
+          state.messages.map(message => (
+            <div key={message.createdAt} className={styles.msgs}>
+              <h2>👨‍💻{message.name}</h2>
+              <h3>{message.message}</h3>
+            </div>
+          ))
+        }
+        <div ref={dummy}></div>
+      </div>
+
     </div>
   )
 }
