@@ -5,6 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "concurrently \"next start -p $PORT\" \"node gun-app.js\"",
+    "heroku-postbuild": "npm run build",
     "lint": "next lint"
   },
   "dependencies": {
