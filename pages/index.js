@@ -68,10 +68,6 @@ export default function Home() {
         <link rel="icon" href="https://i.ibb.co/qBVhRpm/me.png" />
       </Head>
 
-      <div className={styles.title}>
-        <a href='https://github.com/BernardoOlisan/DApp-Chat'><h1>DAPP by BernardoOlisan</h1></a>
-      </div>
-
       <input className={styles.inputmsg} onChange={onChange} placeholder='Message' name='message' value={formState.message} />
       <button className={styles.send} onClick={saveMessage}>Send</button>
 
