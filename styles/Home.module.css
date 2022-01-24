@@ -2,16 +2,30 @@
 .inputmsg {
   background-color: #40444b;
   border: 0;
-  width: 505px;
+  width: 100%;
   height: 6.5%;
   padding: 22px;
   font-size: 18px;
   position: fixed;
   bottom: 0;
-  left: 50%;
-  margin-left: -252px;
   color: white;
   z-index: 1;
+}
+@media screen and (min-width: 800px) {
+  .inputmsg {
+    background-color: #40444b;
+    border: 0;
+    width: 505px;
+    height: 6.5%;
+    padding: 22px;
+    font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -252px;
+    color: white;
+    z-index: 1;
+  }
 }
 
 .send {
@@ -23,9 +37,24 @@
   border: 0;
   position: fixed;
   bottom: 0;
-  left: 50%;
+  right: 0%;
   margin-left: 190px;
   z-index: 1;
+}
+@media screen and (min-width: 800px) {
+  .send {
+    background-color: #43b581;
+    color: white;
+    height: 6.5%;
+    font-size: 18px;
+    padding: 10px;
+    border: 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: 190px;
+    z-index: 1;
+  }
 }
 
 .send:hover {
@@ -37,13 +66,25 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #36393f8e;
-  width: 505px;
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   position: fixed;
   height: 93.5%;
-  left: 50%;
-  margin-left: -252.5px;
+}
+@media screen and (min-width: 800px) {
+  .msgcontainer {
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #36393f8e;
+    width: 505px;
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    height: 93.5%;
+    left: 50%;
+    margin-left: -252.5px;
+  }
 }
 .msgs {
   color: white;
