@@ -2,8 +2,8 @@
 .inputmsg {
   background-color: #40444b;
   border: 0;
-  width: 443px;
-  height: 50px;
+  width: 505px;
+  height: 6.5%;
   padding: 22px;
   font-size: 18px;
   position: fixed;
@@ -17,7 +17,7 @@
 .send {
   background-color: #43b581;
   color: white;
-  height: 50px;
+  height: 6.5%;
   font-size: 18px;
   padding: 10px;
   border: 0;
@@ -37,12 +37,13 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #36393f8e;
-  position: relative;
   width: 505px;
   display: flex;
   flex-direction: column-reverse;
-  height: 94vh;
-  margin: auto;
+  position: fixed;
+  height: 93.5%;
+  left: 50%;
+  margin-left: -252.5px;
 }
 .msgs {
   color: white;
