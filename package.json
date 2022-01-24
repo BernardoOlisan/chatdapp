@@ -2,9 +2,9 @@
   "name": "chat-dapp",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node gun-app.js & next dev",
     "build": "next build",
-    "start": "concurrently \"next start -p $PORT\" \"node gun-app.js\"",
+    "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build",
     "lint": "next lint"
   },

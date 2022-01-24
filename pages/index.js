@@ -7,7 +7,7 @@ import Gun from 'gun'
 
 const gun = Gun({
   peers: [
-    'http://localhost:3030/ws/gun'
+		'https://quarkcompany.com/ws/gun',
   ]
 });
 
