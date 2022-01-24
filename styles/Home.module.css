@@ -41,8 +41,7 @@
   width: 505px;
   display: flex;
   flex-direction: column-reverse;
-  height: 87.5vh;
-  top: 50px;
+  height: 94vh;
   margin: auto;
 }
 .msgs {
@@ -59,17 +58,4 @@
   font-size: 20px;
   overflow-wrap: break-word;
   line-height: 25px;
-}
-.title {
-  position: absolute;
-  background-color: #2e805b;
-  color: white;
-  height: 50px;
-  width: 505px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.title h1 {
-  font-size: 20px;
-  text-align: center;
 }
